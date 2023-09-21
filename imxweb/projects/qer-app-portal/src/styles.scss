@@ -1,0 +1,159 @@
+/* You can add global styles to this file, and also import other style files */
+$material_icons_font_path: "~@elemental-ui/core/assets/MaterialIcons";
+$cadence_font_path: "~@elemental-ui/cadence-icon/dist";
+$source_sans_pro_font_path: "~@elemental-ui/core/assets/Source_Sans_Pro";
+
+@import 'variables.scss';
+@import '~@elemental-ui/core/src/styles/core.scss';
+
+.imx-dialog-panel-class > .mat-dialog-container {
+    background-color: mat-color($asher-gray-palette, 200);
+}
+
+.mat-snack-bar-container.mat-snack-bar-center.eui-alert-banner-panel {
+    position: fixed;
+    left: 0;
+}
+// ToDo (als Teil von 254128): später wieder einbinden, wenn wir den Styleguide soweit haben
+// .pageContent > :last-child > h1 {
+//   font-size: 24px;
+//   margin: 20px 0 15px 45px;
+//   font-weight: 600;
+// }
+
+imx-data-explorer-groups,
+imx-data-explorer-identities,
+imx-data-explorer-accounts {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 1200px;
+    > .data-explorer--groups,
+    .data-explorer--accounts {
+        flex: 1 1 auto;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        > :nth-child(2) {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .data-explorer--accounts {
+        > :nth-child(2) {
+            overflow: hidden;
+        }
+    }
+
+    .data-explorer-table {
+        flex: 1 1 auto;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .data-explorer-table .mat-sidenav-content {
+        overflow-y: auto !important;
+    }
+}
+
+.data-explorer.data-explorer--identities.identities--fullscreen
+{
+    display: flex !important;  // TODO: Task 268556 : Styling direkt in der Komponente umsetzen
+    flex-direction: column;
+}
+
+.governance-sidesheet__tab-content {
+    height: calc(100% - 120px);
+}
+
+
+// Custom ING Styles
+
+.eui-masthead,
+.mat-raised-button.mat-primary,
+.mat-toolbar.mat-primary,
+.mat-tab-group.mat-primary .mat-ink-bar {
+    background-color: $ING_primary;
+}
+
+.menu-wrap {
+    position: relative;
+    a.ing-home {
+        position: absolute;
+        top: 14px;
+        left: 32px;
+        font-size: 16px;
+        color: $ING_nav;
+        opacity: .6;
+        z-index: 100;
+
+        &:hover {
+            cursor: pointer;
+            color: $ING_primary;
+            text-decoration: none;
+        }
+    }
+
+    a.ing-help {
+        position: absolute;
+        top: 14px;
+        right: 42px;
+        color: $ING_primary;
+        z-index: 100;
+
+        &:hover {
+            cursor: pointer;
+            font-weight: 500;
+        }
+    }
+
+    .mat-tab-list {
+        margin-left: 92px;
+    }
+}
+
+.eui-sidesheet .mat-toolbar {
+    background-color: $ING_primary!important;
+}
+
+.eui-alert.eui-alert-type--info.eui-alert-colored {
+    background-color: rgba($ING_primary, 0.2)!important;
+    border: 1px solid $ING_primary!important;
+}
+.eui-alert.eui-alert-type--info .eui-alert-icon {
+    color: $ING_primary!important;
+}
+
+.mat-button.mat-primary, 
+.mat-icon-button.mat-primary, 
+.mat-stroked-button.mat-primary {
+    color: $ING_primary;
+}
+
+.governance-sidesheet .mat-expansion-panel .mat-form-field-appearance-outline .mat-form-field-flex,
+.roledetail-sidesheet .mat-form-field-appearance-outline {
+    .mat-form-field-flex {
+        pointer-events: none;
+    }
+    .mat-form-field-suffix {
+        display: none!important;
+      }
+} 
+.governance-sidesheet .mat-expansion-panel .mat-form-field-appearance-outline .mat-form-field-outline,
+.roledetail-sidesheet .mat-form-field-appearance-outline .mat-form-field-flex {
+    background-color: $Imx_White-two;
+}
+
+.cc_indentity-sidesheet {
+    .mat-select-arrow {
+        color: transparent;
+    }
+    .mat-form-field-appearance-outline .mat-form-field-suffix {
+      display: none!important;
+    }
+  }

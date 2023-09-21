@@ -1,0 +1,56 @@
+@import '~@elemental-ui/core/src/styles/_palette.scss';
+@import 'variables.scss';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+}
+
+h2 {
+  align-self: center;
+  margin-top: 20px;
+}
+
+.mat-card {
+  width: max-content;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-color: inherit;
+
+  button {
+    margin: 20px;
+  }
+
+  .mat-divider-horizontal {
+    position: inherit;
+    margin: 20px 0;
+    border-top-style: dashed;
+  }
+
+  .mat-button-base {
+    border-color: $ING_primary;
+    color: $ING_primary;
+
+    &.mat-raised-button {
+      color: $white;
+    }
+  }
+}
+.mat-card-content {
+  display: flex;
+}
+
+.mat-card-avatar {
+  align-self: center;
+}
+
+.mat-card-avatar > .mat-icon {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+  color: $ING_primary; //$black;
+}

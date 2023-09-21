@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+imx-approvals-table {
+  margin: 10px 0;
+}
+
+.imx-description {
+  margin: 0;
+}
